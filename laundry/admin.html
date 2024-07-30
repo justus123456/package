@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>admin page</title>
+        <link rel="stylesheet" href="fonts/css/all.css">
+        <link rel="stylesheet" href="css/admin.css">
+        <link rel="shortcut icon" href="images/Laundry Logo design template - Made with PosterMyWall.png" type="image/x-icon">
+    </head>
+    <body>
+        <header>
+            <a href="#" class="logo">Idojuan laundry</a>
+            <ul class="nav">
+                <li><a href="#home">product</a></li>
+                <li><a href="#pricing">pricing</a></li>
+                <li><a href="#message">messages</a></li>
+                <li><button id="logout" class="log">logout</button></li>
+                <li><button id="log" class="ion"><i class="fas fa-power-off"></i></button></li>
+
+            </ul>
+            
+        </header>
+        <section class="sect" id="home">
+            <div class="firt">
+                <h1>Please Enter Your product!</h1>
+            </div>
+            <div class="next">
+                <form id="important-form">
+                    <div class="form-group">
+                        <label for="idk">Enter Cloth Type:</label>
+                        <input class="idk" id="idk" name="clothType" type="text" placeholder="Enter clothes" required>
+                        <label for="price">Enter Price:</label>
+                        <input type="number" required class="idk" id="price" placeholder="Enter Price">
+                        <input class="but" type="submit" value="Add">
+                    </div>
+                </form>
+                <a href="laundry.html"><button class="buts">Check the price list</button></a>
+            </div>
+        </section>
+        <section class="pricing" id="pricing">
+            <div class="container">
+                <div class="title">
+                    <h2 class="titleText">Price <span>L</span>ist</h2>
+                </div>
+            </div>
+            <div class="table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>S/N</th>
+                            <th>Clothes</th>
+                            <th>Price</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody class="dat">
+                        <!-- Rows will be dynamically populated here -->
+                    </tbody>
+                </table>
+                <button id="clear" class="clear">Clear</button>
+            </div>
+        </section>
+        <section class="message" id="message">
+            <div class="container">
+                <div class="title">
+                    <h2 class="titleText"><span>m</span>essages</h2>
+                </div>
+                <div class="table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>name</th>
+                                <th>email</th>
+                                <th>message</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody class="datam">
+                            <!-- Rows will be dynamically populated here -->
+                        </tbody>
+                    </table>
+                    <button id="delete" class="clear">Clear</button>
+                </div>
+            </div>
+        </section>
+        <div class="cp">
+            <p>&copy; 2024 <a href="#home">Idojuan Laundry and Dry Cleaning Services</a> all rights reserved</p>
+            <button id="arrow">&uparrow;</button>
+        </div>
+
+        <script src="admin.js" defer></script>
+    </body>
+</html>
