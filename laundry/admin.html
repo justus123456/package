@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="fonts/css/all.css">
         <link rel="stylesheet" href="css/admin.css">
         <link rel="shortcut icon" href="images/Laundry Logo design template - Made with PosterMyWall.png" type="image/x-icon">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
         <style>
             html::-webkit-scrollbar{
@@ -31,7 +32,7 @@
             </ul>
             
         </header>
-        <section class="sect" id="home">
+        <section class="sect" id="home"  data-aos="fade-down">
             <div class="firt">
                 <h1>Please Enter Your Product!</h1>
             </div>
@@ -63,7 +64,7 @@
             </div>
         </section>
         
-        <section class="pricing" id="pricing">
+        <section class="pricing" id="pricing"  data-aos="fade-right">
             <div class="container">
                 <div class="title">
                     <h2 class="titleText">Price <span>L</span>ist</h2>
@@ -88,7 +89,7 @@
                 <button id="clear" class="clear">Clear</button>
             </div>
         </section>
-        <section class="message" id="message">
+        <section class="message" id="message"  data-aos="fade-up">
             <div class="container">
                 <div class="title">
                     <h2 class="titleText"><span>m</span>essages</h2>
@@ -116,6 +117,13 @@
             <button id="arrow">&uparrow;</button>
         </div>
 
+        
         <script src="admin.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+            AOS.init({
+                duration: 600,
+            });
+        </script>
     </body>
 </html>

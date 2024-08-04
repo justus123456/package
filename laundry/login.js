@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Simulated admin credentials
     const adminCredentials = {
         username: 'admin',
-        password: 'password123'
+        password: 'pa'
     };
 
     form.addEventListener('submit', function(e) {
