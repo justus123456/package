@@ -7,6 +7,24 @@
         <link rel="stylesheet" href="css/laundry.css">
         <link rel="stylesheet" href="fonts/css/all.css">
         <link rel="shortcut icon" href="images/Laundry Logo design template - Made with PosterMyWall.png" type="image/x-icon">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <style>
+                        ::-webkit-scrollbar {
+                width: 12px; /* Width of the vertical scrollbar */
+                height: 12px; /* Height of the horizontal scrollbar */
+            }
+            ::-webkit-scrollbar-thumb {
+                background: #888; /* Scrollbar color */
+                border-radius: 6px; /* Rounded corners */
+            }
+            ::-webkit-scrollbar-track {
+            background: #d4d4d4; /* Track color */
+            }
+            ::-webkit-scrollbar-thumb:hover {
+                background: #555; /* Darker color on hover */
+}
+        </style>
     </head>
     <body>
         <div class="preloader">
@@ -18,28 +36,29 @@
         </div>
         <header>
             <a href="#" class="logo">Idojuan laundry</a>
+            <div class="menuToggle" onclick="toggleMenu();"></div>
             <ul class="nav">
-                <li><a href="#home">home</a></li>
-                <li><a href="#about">about</a></li>
-                <li><a href="#system">system</a></li>
-                <li><a href="#pricing">pricing</a></li>
-                <li><a href="#contact">contact</a></li>
+                <li><a href="#home" onclick="toggleMenu();">home</a></li>
+                <li><a href="#about" onclick="toggleMenu();">about</a></li>
+                <li><a href="#system" onclick="toggleMenu();">system</a></li>
+                <li><a href="#pricing" onclick="toggleMenu();">pricing</a></li>
+                <li><a href="#contact" onclick="toggleMenu();">contact</a></li>
             </ul>
         </header>
         <section class="home" id="home">
             <div class="content">
-                <h2>idojuan laundry and dry cleaning services</h2>
-                <p>Welcome to Idojuan Laundry and Dry Cleaning Services! We
+                <h2  data-aos="fade-up">idojuan laundry and dry cleaning services</h2>
+                <p  data-aos="fade-up" data-aos-delay="100">Welcome to Idojuan Laundry and Dry Cleaning Services! We
                     provide exceptional garment care with top-quality cleaning
                     and attention to detail.
                     Trust us to keep your clothes looking their best.</p>
-                <a href="#pricing" class="btn-1">price</a>
+                <a href="#pricing" class="btn-1"  data-aos="fade-up" data-aos-delay="200">price</a>
             </div>
         </section>
         <section class="about" id="about">
             <div class="container">
                 <div class="row">
-                    <div class="col50">
+                    <div class="col50" data-aos="fade-right">
                         <div class="titleText">
                             <span>A</span>bout us
                         </div>
@@ -66,14 +85,14 @@
 
                         </p>
                     </div>
-                    <div class="col50">
+                    <div class="col50" data-aos="fade-left">
                         <div class="imgbx">
                             <img src="images/pexels-ron-lach-10554836.jpg" alt>
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col50">
+                    <div class="col50" data-aos="fade-left">
                         <p>
                             <span>why choose us</span>,<br><br>
                             At Idojuan Laundry And Dry Cleaning Services, our
@@ -86,14 +105,14 @@
                             expectations every time.
                         </p>
                     </div>
-                    <div class="col50">
+                    <div class="col50" data-aos="fade-right">
                         <div class="imgbx">
                             <img src="images/pexels-pixabay-271711.jpg" alt>
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col50">
+                    <div class="col50 " data-aos="fade-right">
                         <p>
                             <span>our mission</span><br><br>
                             Our mission at Idojuan Laundry And Dry Cleaning
@@ -107,7 +126,7 @@
 
                         </p>
                     </div>
-                    <div class="col50">
+                    <div class="col50" data-aos="fade-left">
                         <div class="imgbx">
                             <img
                                 src="images/pexels-karolina-grabowska-4959879.jpg"
@@ -119,7 +138,7 @@
         </section>
         <section class="system" id="system">
             <div class="container">
-                <div class="title">
+                <div class="title" data-aos="fade-up">
                     <h2 class="titleText">our <span>s</span>ystem</h2>
                     <p>Our system processes clothes meticulously, starting with
                         careful sorting and washing using advanced technology
@@ -133,7 +152,7 @@
                         <div class="row">
 
                             <div class="timeline-item">
-                                <div class="timeline-item-inner">
+                                <div class="timeline-item-inner" data-aos="fade-right">
                                     <i class="icon"></i>
                                     <span>administration</span>
                                     <h4>admin</h4>
@@ -145,7 +164,7 @@
                             </div>
 
                             <div class="timeline-item">
-                                <div class="timeline-item-inner">
+                                <div class="timeline-item-inner" data-aos="fade-left">
                                     <i class="icon"></i>
                                     <span>washing stage</span>
                                     <h4>laundry attendant</h4>
@@ -157,7 +176,7 @@
                             </div>
 
                             <div class="timeline-item">
-                                <div class="timeline-item-inner">
+                                <div class="timeline-item-inner" data-aos="fade-right">
                                     <i class="icon"></i>
                                     <span>drying stage</span>
                                     <h4>drying clerk</h4>
@@ -169,7 +188,7 @@
                             </div>
 
                             <div class="timeline-item">
-                                <div class="timeline-item-inner">
+                                <div class="timeline-item-inner" data-aos="fade-left">
                                     <i class="icon"></i>
                                     <span>ironing stage</span>
                                     <h4>ironing officer</h4>
@@ -180,7 +199,7 @@
                             </div>
 
                             <div class="timeline-item">
-                                <div class="timeline-item-inner">
+                                <div class="timeline-item-inner" data-aos="fade-right">
                                     <i class="icon"></i>
                                     <span>packaging stage</span>
                                     <h4>packaging officer</h4>
@@ -197,17 +216,20 @@
         </section>
         <section class="pricing" id="pricing">
             <div class="container">
-                <div class="title">
+                <div class="title" data-aos="fade-up">
                     <h2 class="titleText">price <span>l</span>ist</h2>
+                    <p>check out our price list</p>
                 </div>
             </div>
-            <div class="table">
+            <div class="table" data-aos="fade-left" data-aos-anchor-placement="top-center">
                 <table>
                     <thead>
                         <tr>
                             <th>s/n</th>
                             <th>clothes</th>
-                            <th>price</th>
+                            <th>ironing Price</th>
+                            <th>washing price</th>
+                            <th>gender</th>
                         </tr>
                     </thead>
                     <tbody class="dat">
@@ -222,44 +244,45 @@
         </section>
         <section class="contact" id="contact">
             <div class="container">
-                <div class="title">
+                <div class="title" data-aos="fade-up">
                     <h2 class="titleText">contact <span>u</span>s</h2>
                     <p>Get in touch with us for any questions, feedback, or to
                         learn more about our services. We're here to help!</p>
                 </div>
                 <div class="box">
-                    <form class="contact-form" id="for">
+                    <form class="contact-form" id="contact-form" data-aos="fade-right">
                         <h3>send message</h3>
-                        <div class="input-box">
+                        <div class="input-box" data-aos="fade-right" data-aos-delay="20">
                             <input type="text" placeholder="name" id="name" required>
                         </div>
-                        <div class="input-box">
+                        <div class="input-box" data-aos="fade-right" data-aos-delay="40">
                             <input type="email" placeholder="email" id="mail" required>
                         </div>
-                        <div class="input-box">
+                        <div class="input-box" data-aos="fade-right" data-aos-delay="60">
                             <textarea placeholder="message" id="info" required></textarea>
                         </div>
-                        <div class="input-box">
+                        <div class="input-box" data-aos="fade-right" data-aos-delay="100">
                             <input type="submit" value="send" class="btn">
                         </div>
                         <p id="success-message"> <button id="clear"><i class="fas fa-times"></i></button>  message received </p>
                     </form>
-                    <div class="map">
+                    
+                    <div class="map" data-aos="fade-left">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15756.149034500775!2d7.3539399!3d9.1511077!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104ddf5afabd6683%3A0x3121e9f963afd580!2sIdojuan%20Laundry%20and%20dry%20cleaning%20services!5e0!3m2!1sen!2sng!4v1722087592027!5m2!1sen!2sng"
                             allowfullscreen loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
-                    <div class="icon-container">
-                        <div class="icons">
+                    <div class="icon-container" data-aos="fade-up" data-aos-delay="100">
+                        <div class="icons" data-aos="fade-up">
                             <span>address:</span>
                             <p>Mosque shop 7 beside Ogab Services, Gado Nasko road 2/1, Kubwa, Abuja 901101, Federal Capital Territory</p>
                         </div>
-                        <div class="icons">
+                        <div class="icons" data-aos="fade-up" data-aos-delay="200">
                             <span>email:</span>
                             <p>Idoresltd@yahoo.com.</p>
                         </div>
-                        <div class="icons">
+                        <div class="icons" data-aos="fade-up" data-aos-delay="300">
                             <span>Phone number:</span>
                             <p>08063894359,08036303555</p>
                         </div>
@@ -288,5 +311,11 @@
             </script>
 
         <script src="laundry.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+            AOS.init({
+                duration: 600,
+            });
+        </script>
     </body>
 </html>

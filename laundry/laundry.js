@@ -3,7 +3,13 @@ window.addEventListener("scroll", function() {
     const header = document.querySelector("header");
     header.classList.toggle("sticky", window.scrollY > 0);
 });
+ function toggleMenu(){
+    const menuBar = document.querySelector('.menuToggle');
+    const nav = document.querySelector('.nav');
 
+    menuBar.classList.toggle('active');
+    nav.classList.toggle('active');
+ };
 // Preloader functionality
 const preLoad = document.querySelector('.preloader');
 const body = document.querySelector('body');
@@ -35,11 +41,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Render price list from localStorage
 document.addEventListener('DOMContentLoaded', () => {
     const result = document.querySelector('.dat');
 
+    // Function to render the price list
     function renderPriceList() {
+        // Retrieve items from local storage
         const items = JSON.parse(localStorage.getItem('priceList')) || [];
 
         if (items.length > 0) {
@@ -47,55 +54,49 @@ document.addEventListener('DOMContentLoaded', () => {
                 <tr>
                     <td>${index + 1}</td>
                     <td>${item.clothType}</td>
-                    <td><span>₦</span> ${item.price}</td>
+                    <td>${item.ironingPrice || 'N/A'}</td>
+                    <td>${item.washingPrice || 'N/A'}</td>
+                    <td>${item.maleChecked || item.femaleChecked ? (item.maleChecked ? 'Male' : 'Female') : 'N/A'}</td>
                 </tr>
             `).join('');
         } else {
-            result.innerHTML = '<tr><td colspan="3">No items found.</td></tr>';
+            result.innerHTML = '<tr><td colspan="5">No items found.</td></tr>';
         }
     }
 
     // Initial render of the price list
     renderPriceList();
 });
-
-// Handle form submission and localStorage operations
 document.addEventListener('DOMContentLoaded', () => {
-    const form = document.getElementById('for');
-    const user = document.getElementById('name');
-    const mail = document.getElementById('mail');
-    const inform = document.getElementById('info');
+    const form = document.getElementById('contact-form');
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('mail'); // Updated to match your HTML
+    const messageInput = document.getElementById('info'); // Updated to match your HTML
     const successMessage = document.getElementById('success-message');
-    const clear = document.getElementById('clear');
 
-    if (form && user && mail && inform && successMessage && clear) {
-        // Initialize messageList if it doesn't exist
-        if (!localStorage.getItem('messageLists')) {
-            localStorage.setItem('messageLists', JSON.stringify([]));
-        }
-
+    if (form && nameInput && emailInput && messageInput && successMessage) {
         form.addEventListener('submit', (e) => {
-            e.preventDefault();
+            e.preventDefault(); // Prevent default form submission
 
-            const one = user.value.trim();
-            const two = mail.value.trim();
-            const three = inform.value.trim();
+            const name = nameInput.value.trim();
+            const email = emailInput.value.trim();
+            const message = messageInput.value.trim();
 
-            if (one && two && three) {
-                let items = JSON.parse(localStorage.getItem('messageLists')) || [];
-                items.push({ person: one, gmail: two, response: three });
-                localStorage.setItem('messageLists', JSON.stringify(items));
+            if (name && email && message) {
+                let messages = JSON.parse(localStorage.getItem('messages')) || [];
+                messages.push({ name, email, message });
+                localStorage.setItem('messages', JSON.stringify(messages));
 
-                user.value = '';
-                mail.value = '';
-                inform.value = '';
+                // Clear form fields
+                nameInput.value = '';
+                emailInput.value = '';
+                messageInput.value = '';
 
-                successMessage.style.display = "block";
+                // Show success message
+                successMessage.style.display = 'block';
+                setTimeout(() => successMessage.style.display = 'none', 3000); // Hide after 3 seconds
             }
-        });
-
-        clear.addEventListener('click', () => {
-            successMessage.style.display = "none";
         });
     }
 });
+

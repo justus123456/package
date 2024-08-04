@@ -119,6 +119,80 @@ button:hover {
     position: absolute;
 
 } 
+/* Media Queries */
+@media (max-width: 991px) {
+    .login-container {
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+    }
+    .cp {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    .login-container {
+        width: 90%;
+        padding: 20px;
+    }
+    .btn {
+        width: 40%;
+    }
+    .space {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+
+@media (max-width: 425px) {
+    .login-container {
+        width: 95%;
+        padding: 15px;
+    }
+    .login-container h2 {
+        font-size: 1.5rem;
+    }
+    .form-group input {
+        padding: 6px;
+    }
+    .btn {
+        width: 100%;
+    }
+    .cp {
+        margin-top: 50px;
+    }
+    .cp p, .cp a {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .login-container {
+        width: 100%;
+        padding: 10px;
+    }
+    .login-container h2 {
+        font-size: 1.2rem;
+    }
+    .form-group input {
+        padding: 5px;
+    }
+    .btn {
+        width: 100%;
+    }
+    .cp {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 5px;
+    }
+    .cp p, .cp a {
+        font-size: 0.7rem;
+    }
+}
+
   
   
 

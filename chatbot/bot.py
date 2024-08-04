@@ -1,13 +1,9 @@
-# bot.py
+import numpy as np
 
-from chatterbot import ChatBot
-
-chatbot = ChatBot("Chatpot")
-
-exit_conditions = (":q", "quit", "exit")
-while True:
-    query = input("> ")
-    if query in exit_conditions:
-        break
-    else:
-        print(f"🪴 {chatbot.get_response(query)}")
+class ChatBot():
+    def __init__(self, name):
+        print("----- starting up", name, "-----")
+        self.name = name
+# Execute the AI
+if __name__ == "__main__":
+    ai = ChatBot(name="Dev")
